@@ -1,0 +1,73 @@
+﻿@model WebApi.Models.PatientModel
+
+@{
+    ViewBag.Title = "Add Patient";
+}
+
+<h2>Add Patient</h2>
+
+@using (Ajax.BeginForm("Patients", "api", null, new AjaxOptions()
+{ 
+    HttpMethod = "Post",
+    Url = "~/api/Patients",
+    OnSuccess="OnSuccess",
+    OnFailure="OnFailure"
+}))
+{
+    @Html.LabelFor(x => x.FirstName)
+    @Html.TextBoxFor(x=>x.FirstName)
+    <br />
+    @Html.LabelFor(x => x.LastName)
+    @Html.TextBoxFor(x => x.LastName)
+    <br />
+    @Html.LabelFor(x => x.DateOfBirth)
+    @Html.TextBoxFor(x => x.DateOfBirth)
+    <br />
+    @Html.LabelFor(x => x.CivilStatus)
+    @Html.TextBoxFor(x => x.CivilStatus)
+    <br />
+    @Html.LabelFor(x => x.HandedNess)
+    @Html.TextBoxFor(x => x.HandedNess)
+    <br />
+    @Html.LabelFor(x => x.Gender)
+    @Html.TextBoxFor(x => x.Gender)
+    <br />
+    @Html.LabelFor(x => x.Occupation)
+    @Html.TextBoxFor(x => x.Occupation)
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address)
+    <br />
+    @Html.LabelFor(x => x.Religion)
+    @Html.TextBoxFor(x => x.Religion)
+    <br />
+    @Html.LabelFor(x => x.Nationality)
+    @Html.TextBoxFor(x => x.Nationality)
+    <br />
+    <input id="btnAddPatient" type="button" value="Submit"/>
+}
+
+@section scripts {
+    <script>
+        function OnSuccess(data) {
+            window.location.href = "@Url.Action("Index","Patient")";
+        }
+
+        function OnFailure() {
+            alert("Error");
+        }
+
+        $(function () {
+            $("#btnAddPatient").click(function () {
+                $.ajax("@Url.Content("~/api/Patients")", {
+                    type: "Post",
+                    data: $("form").serialize(),
+                    success: OnSuccess,
+                    error: OnFailure,
+                });
+
+            });
+        });
+    </script>
+}
+

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Patients";
+}
+
+<h2>Patients</h2>
+<button id="btnAdd">Add</button>
+<table id="tblPatients">
+</table>
+@section scripts
+{
+    <script>
+
+        var columns = ["PatientId", "FirstName", "LastName", "DateOfBirth", "CivilStatus", "Handedness", "Gender", "Occupation", "Address", "Religion", "Nationality"]
+
+        function getPatients(){
+            $.ajax("@Url.Content("~/api/Patients")", {
+                cache: false,
+                beforeSend: function(){
+
+                },
+                success: populateTable,
+                complete: function () {
+
+                }
+            });
+        }
+
+        function populateTable(data) {
+            $("#tblPatients").empty();
+            $("#tblPatients").append("<tr></tr>");
+
+            $.each(columns, function (index, column) {
+                $("#tblPatients tr:last")
+                .append("<td>" + column + "</td>");
+            });
+
+            $.each(data, function (index, patient) {
+                $("#tblPatients").append("<tr></tr>");
+                $("#tblPatients tr:last")
+                .append("<td>" + patient.PatientId + "</td>")
+                .append("<td>" + patient.FirstName + "</td>")
+                .append("<td>" + patient.LastName + "</td>")
+                .append("<td>" + patient.DateOfBirth + "</td>")
+                .append("<td>" + patient.CivilStatus + "</td>")
+                .append("<td>" + patient.HandedNess + "</td>")
+                .append("<td>" + patient.Gender + "</td>")
+                .append("<td>" + patient.Occupation + "</td>")
+                .append("<td>" + patient.Address + "</td>")
+                .append("<td>" + patient.Religion + "</td>")
+                .append("<td>" + patient.Nationality + "</td>");
+            });
+
+            if(data.length < 1)
+            {
+                $("#tblPatients").append("<tr></tr>");
+                var x = columns.length;
+                $("#tblPatients tr:last").append("<td colspan='" + x +"'>No patients</td>");
+            }
+        }
+
+        $(function () {
+            getPatients();
+            $("#btnAdd").click(function () {window.location.href="@Url.Action("Add","Patient")" });
+        });
+    </script>
+}

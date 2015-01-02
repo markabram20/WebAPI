@@ -15,4 +15,18 @@ namespace WebApi.Controllers
             return View();
         }
     }
+
+    public class PatientController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+    }
 }
