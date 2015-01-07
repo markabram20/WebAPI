@@ -218,21 +218,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <None Include="Migrations\201412240559447_BirthDate.cs" />
-    <Compile Include="Migrations\201412240559447_BirthDate.Designer.cs">
-      <DependentUpon>201412240559447_BirthDate.cs</DependentUpon>
+    <Compile Include="Migrations\201501030634334_UsersInitialConfiguration.cs" />
+    <Compile Include="Migrations\201501030634334_UsersInitialConfiguration.Designer.cs">
+      <DependentUpon>201501030634334_UsersInitialConfiguration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501020108255_Patient.cs" />
-    <Compile Include="Migrations\201501020108255_Patient.Designer.cs">
-      <DependentUpon>201501020108255_Patient.cs</DependentUpon>
+    <Compile Include="Migrations\201501030646067_DataInitialMigration.cs" />
+    <Compile Include="Migrations\201501030646067_DataInitialMigration.Designer.cs">
+      <DependentUpon>201501030646067_DataInitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501020500044_ChangePatient.cs" />
-    <Compile Include="Migrations\201501020500044_ChangePatient.Designer.cs">
-      <DependentUpon>201501020500044_ChangePatient.cs</DependentUpon>
+    <Compile Include="Migrations\201501040335295_AncillaryProcedure.cs" />
+    <Compile Include="Migrations\201501040335295_AncillaryProcedure.Designer.cs">
+      <DependentUpon>201501040335295_AncillaryProcedure.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501020658303_Patient_Required_Info_1.cs" />
-    <Compile Include="Migrations\201501020658303_Patient_Required_Info_1.Designer.cs">
-      <DependentUpon>201501020658303_Patient_Required_Info_1.cs</DependentUpon>
+    <Compile Include="Migrations\201501040352008_DrugHistory.cs" />
+    <Compile Include="Migrations\201501040352008_DrugHistory.Designer.cs">
+      <DependentUpon>201501040352008_DrugHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -243,6 +243,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <None Include="Properties\PublishProfiles\ptprojectapi.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
@@ -295,6 +296,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
@@ -316,21 +318,21 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201412240559447_BirthDate.resx">
-      <DependentUpon>201412240559447_BirthDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501020108255_Patient.resx">
-      <DependentUpon>201501020108255_Patient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501020500044_ChangePatient.resx">
-      <DependentUpon>201501020500044_ChangePatient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501020658303_Patient_Required_Info_1.resx">
-      <DependentUpon>201501020658303_Patient_Required_Info_1.cs</DependentUpon>
-    </EmbeddedResource>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <EmbeddedResource Include="Migrations\201501030634334_UsersInitialConfiguration.resx">
+      <DependentUpon>201501030634334_UsersInitialConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501030646067_DataInitialMigration.resx">
+      <DependentUpon>201501030646067_DataInitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501040335295_AncillaryProcedure.resx">
+      <DependentUpon>201501040335295_AncillaryProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501040352008_DrugHistory.resx">
+      <DependentUpon>201501040352008_DrugHistory.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,7 +3,7 @@ namespace WebApi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class BirthDate : DbMigration
+    public partial class UsersInitialConfiguration : DbMigration
     {
         public override void Up()
         {

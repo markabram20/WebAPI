@@ -63,6 +63,9 @@ c:\users\mark\documents\visual studio 2013\Projects\WebApi\WebApi\obj\Debug\WebA
 c:\users\mark\documents\visual studio 2013\Projects\WebApi\WebApi\obj\Debug\WebApi.pdb
 c:\users\mark\documents\visual studio 2013\Projects\WebApi\WebApi\obj\Debug\WebApi.Migrations.BirthDate.resources
 c:\users\mark\documents\visual studio 2013\Projects\WebApi\WebApi\obj\Debug\WebApi.csproj.GenerateResource.Cache
+C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.UsersInitialConfiguration.resources
+C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.DataInitialMigration.resources
+C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.csproj.GenerateResource.Cache
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\WebApi.dll.config
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\WebApi.dll
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\WebApi.pdb
@@ -126,11 +129,8 @@ C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\Microsoft.Owin.Security.Google.
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\bin\System.Web.Http.Owin.xml
-C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.BirthDate.resources
-C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.csproj.GenerateResource.Cache
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.dll
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.pdb
-C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.Patient.resources
+C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.AncillaryProcedure.resources
+C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.DrugHistory.resources
 C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
-C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.ChangePatient.resources
-C:\Users\mark\Documents\GitHub\WebAPI\WebApi\obj\Debug\WebApi.Migrations.Patient_Required_Info_1.resources
