@@ -71,6 +71,8 @@ namespace WebApi.DAL
         
         public string HPI { get; set; }
 
+        public PMHx PMHx { get; set; }
+
 
         // Navigation Properties and Foreign Keys
         //
@@ -120,4 +122,32 @@ namespace WebApi.DAL
         public int PatientVisitId { get; set; }
         public PatientVisit PatientVisit { get; set; }
     }
+
+    [ComplexType]
+    public class PMHx {
+        [MaxLength(50)]
+        public string Trauma { get; set; }
+        public bool Arthritis { get; set; }
+        public DateTime? Asthma { get; set; }
+        public bool HPN { get; set; }
+        [MaxLength(50)]
+        public string DM { get; set; }
+        public bool Allergies { get; set; }
+        [MaxLength(50)]
+        public string Surgery { get; set; }
+        public DateTime? SurgeryDate { get; set; }
+        [MaxLength(50)]
+        public string Hopitalization { get; set; }
+        public DateTime? HopitalizationDate { get; set; }
+        [MaxLength(50)]
+        public string CardiovascularDisease { get; set; }
+        [MaxLength(50)]
+        public string PulmonaryCondition { get; set; }
+        [MaxLength(50)]
+        public string NeurologyCondition { get; set; }
+        public bool Cancer { get; set; }
+        [MaxLength(50)]
+        public string Others { get; set; }
+    }
 }
+

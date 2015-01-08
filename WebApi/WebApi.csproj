@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
+    <Compile Include="Controllers\PatientVisitsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AppDbContext.cs" />
     <Compile Include="DAL\Patient.cs" />
@@ -233,6 +234,10 @@
     <Compile Include="Migrations\201501040352008_DrugHistory.cs" />
     <Compile Include="Migrations\201501040352008_DrugHistory.Designer.cs">
       <DependentUpon>201501040352008_DrugHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501080527122_PMHx.cs" />
+    <Compile Include="Migrations\201501080527122_PMHx.Designer.cs">
+      <DependentUpon>201501080527122_PMHx.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -332,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501040352008_DrugHistory.resx">
       <DependentUpon>201501040352008_DrugHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501080527122_PMHx.resx">
+      <DependentUpon>201501080527122_PMHx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
