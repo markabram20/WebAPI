@@ -239,6 +239,10 @@
     <Compile Include="Migrations\201501080527122_PMHx.Designer.cs">
       <DependentUpon>201501080527122_PMHx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501080552224_FMHx.cs" />
+    <Compile Include="Migrations\201501080552224_FMHx.Designer.cs">
+      <DependentUpon>201501080552224_FMHx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -340,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501080527122_PMHx.resx">
       <DependentUpon>201501080527122_PMHx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501080552224_FMHx.resx">
+      <DependentUpon>201501080552224_FMHx.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
