@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebApi.DAL;
+using WebApi.Models;
 
 namespace WebApi.Controllers
 {
@@ -22,6 +23,8 @@ namespace WebApi.Controllers
         {
             return db.Patients;
         }
+
+
 
         // GET: api/Patients/5
         [ResponseType(typeof(Patient))]
