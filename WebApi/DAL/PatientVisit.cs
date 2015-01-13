@@ -10,6 +10,13 @@ namespace WebApi.DAL
 {
     public class PatientVisit
     {
+        public PatientVisit()
+        {
+            PMHx = new PMHx();
+            FMHx = new FMHx();
+            Patient = new Patient();
+        }
+
         [Key]
         public int PatientVisitId { get; set; }
 

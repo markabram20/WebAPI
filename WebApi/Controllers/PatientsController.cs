@@ -40,6 +40,9 @@ namespace WebApi.Controllers
         }
 
         // PUT: api/Patients/5
+        //[Route]
+        [HttpPost]
+        [Route("api/Patients/Edit/{id}")]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutPatient(int id, Patient patient)
         {
