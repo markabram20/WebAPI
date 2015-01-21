@@ -18,6 +18,8 @@ namespace WebApi.Models
         public string Gender { get; set; }
         public string Occupation { get; set; }
         public string Address { get; set; }
+        public string CityTown { get; set; }
+        public string Province { get; set; }
         public string Religion { get; set; }
         public string Nationality { get; set; }
     }
@@ -27,5 +29,20 @@ namespace WebApi.Models
         public string DisplayName { get; set; }
         public string Address { get; set; }
         public DateTime? LastVisit { get; set; }
+    }
+
+    public class PatientVisitModel
+    {
+        public int PatientId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+        public string CivilStatus { get; set; }
+        public string HandedNess { get; set; }
+        public string Gender { get; set; }
+        public string Occupation { get; set; }
+        public string Address { get; set; }
+        public string Religion { get; set; }
+        public string Nationality { get; set; }
     }
 }

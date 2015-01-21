@@ -15,6 +15,11 @@ namespace WebApi.DAL
             PMHx = new PMHx();
             FMHx = new FMHx();
             Patient = new Patient();
+            DateOfAdmission = null;
+            DateOfConsultation = null;
+            DateOfInitialEvaluation = null;
+            DateOfReferral = null;
+            DateOfSurgery = null;
         }
 
         [Key]
@@ -48,11 +53,11 @@ namespace WebApi.DAL
         [MaxLength(11)]
         public string PatientType { get; set; }
         
-        public DateTime DateOfAdmission { get; set; }
-        public DateTime DateOfConsultation { get; set; }
+        public DateTime? DateOfAdmission { get; set; }
+        public DateTime? DateOfConsultation { get; set; }
         [MaxLength(50)]
         public string Surgeon { get; set; }
-        public DateTime DateOfSurgery { get; set; }
+        public DateTime? DateOfSurgery { get; set; }
         
         [MaxLength(50)]
         public string GeneralPhysician { get; set; }
@@ -71,8 +76,8 @@ namespace WebApi.DAL
 
         [MaxLength(50)]
         public string ReferringDoctor { get; set; }
-        public DateTime DateOfReferral { get; set; }
-        public DateTime DateOfInitialEvaluation { get; set; }
+        public DateTime? DateOfReferral { get; set; }
+        public DateTime? DateOfInitialEvaluation { get; set; }
 
         public string Diagnosis { get; set; }
         

@@ -249,9 +249,22 @@
     <Compile Include="Migrations\201501090530105_MissingMigration.Designer.cs">
       <DependentUpon>201501090530105_MissingMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501140611363_NullableDateTimeInSoap.cs" />
+    <Compile Include="Migrations\201501140611363_NullableDateTimeInSoap.Designer.cs">
+      <DependentUpon>201501140611363_NullableDateTimeInSoap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501140624113_NullableDateTimeInSoap_2.cs" />
+    <Compile Include="Migrations\201501140624113_NullableDateTimeInSoap_2.Designer.cs">
+      <DependentUpon>201501140624113_NullableDateTimeInSoap_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501150736238_PatientAddressUpdate.cs" />
+    <Compile Include="Migrations\201501150736238_PatientAddressUpdate.Designer.cs">
+      <DependentUpon>201501150736238_PatientAddressUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomValidation.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PatientModels.cs" />
     <Compile Include="Models\SoapModels.cs" />
@@ -266,6 +279,8 @@
     <Content Include="Scripts\jquery-2.1.0.min.js" />
     <Content Include="Views\Patient\Index.cshtml" />
     <Content Include="Views\Patient\Add.cshtml" />
+    <Content Include="Views\PatientVisit\Index.cshtml" />
+    <Content Include="Views\PatientVisit\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -357,6 +372,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501090530105_MissingMigration.resx">
       <DependentUpon>201501090530105_MissingMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501140611363_NullableDateTimeInSoap.resx">
+      <DependentUpon>201501140611363_NullableDateTimeInSoap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501140624113_NullableDateTimeInSoap_2.resx">
+      <DependentUpon>201501140624113_NullableDateTimeInSoap_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501150736238_PatientAddressUpdate.resx">
+      <DependentUpon>201501150736238_PatientAddressUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

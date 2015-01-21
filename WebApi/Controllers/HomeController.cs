@@ -29,4 +29,17 @@ namespace WebApi.Controllers
         }
 
     }
+
+    public class PatientVisitController:Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Add()
+        {
+            return View();
+        }
+    }
 }

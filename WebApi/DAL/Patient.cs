@@ -22,6 +22,8 @@ namespace WebApi.DAL
         public string Gender { get; set; }
         public string Occupation { get; set; }
         public string Address { get; set; }
+        public string CityTown { get; set; }
+        public string Province { get; set; }
         public string Religion { get; set; }
         public string Nationality { get; set; }
 

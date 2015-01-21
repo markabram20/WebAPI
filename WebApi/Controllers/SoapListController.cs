@@ -19,7 +19,8 @@ namespace WebApi.Controllers
         {
             return db.PatientVisits.Where(x => x.PatientId == id).Select(x => new SoapListItem() {
                 PatientVisitId = x.PatientVisitId,
-                Date = x.DateOfConsultation
+                //Date = x.DateOfConsultation
+                Date = x.DateOfConsultation.Value
             });
         }
     }

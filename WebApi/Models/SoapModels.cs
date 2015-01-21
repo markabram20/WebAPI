@@ -9,6 +9,6 @@ namespace WebApi.Models
     public class SoapListItem
     {
         public int PatientVisitId { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
     }
 }
