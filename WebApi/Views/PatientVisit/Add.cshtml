@@ -1,0 +1,180 @@
+﻿@model WebApi.Models.PatientVisitModel
+
+@{
+    ViewBag.Title = "Add Patient";
+}
+
+<h2>Add Patient</h2>
+
+@using (Ajax.BeginForm("Patients", "api", null, new AjaxOptions()
+{
+    HttpMethod = "Post",
+    Url = "~/api/Patients",
+    OnSuccess = "OnSuccess",
+    OnFailure = "OnFailure"
+}))
+{
+    @Html.LabelFor(x=>x.PatientId)
+    @Html.TextBoxFor(x => x.PatientId)
+    <br />
+    @Html.LabelFor(x => x.FirstName)
+    @Html.TextBoxFor(x => x.FirstName)
+    <br />
+    @Html.LabelFor(x => x.LastName)
+    @Html.TextBoxFor(x => x.LastName)
+    <br />
+    @Html.LabelFor(x => x.Age)
+    @Html.TextBoxFor(x => x.Age)
+    <br />
+    @Html.LabelFor(x => x.CivilStatus)
+    @Html.TextBoxFor(x => x.CivilStatus)
+    <br />
+    @Html.LabelFor(x => x.HandedNess)
+    @Html.TextBoxFor(x => x.HandedNess)
+    <br />
+    @Html.LabelFor(x => x.Gender)
+    @Html.TextBoxFor(x => x.Gender)
+    <br />
+    @Html.LabelFor(x => x.Occupation)
+    @Html.TextBoxFor(x => x.Occupation)
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address)
+    <br />
+    @Html.LabelFor(x => x.Religion)
+    @Html.TextBoxFor(x => x.Religion)
+    <br />
+    @Html.LabelFor(x => x.Nationality)
+    @Html.TextBoxFor(x => x.Nationality)
+    <br />
+    <input id="btnAddPatient" type="button" value="Submit" />
+    <input id="btnAddPatient2" type="button" value="Submit" />
+}
+
+@section scripts {
+    <script>
+        function OnSuccess(data) {
+            //window.location.href = "@Url.Action("Index","PatientVisit")";
+        }
+
+        function OnFailure() {
+            alert("Error");
+        }
+
+        $(function () {
+            $("#btnAddPatient").click(function () {
+                var data = {
+                    "PatientVisitId": 0,
+                    "FirstName": "Gary",
+                    "LastName": "Yumul",
+                    "Age": 25,
+                    "Sex": "M",
+                    "Address": "San Juan 1st Guagua Pampanga",
+                    "CityTown": "City",
+                    "Province": "Province",
+                    "CivilStatus": "Single",
+                    "HandedNess": "Right",
+                    "Occupation": "Public Servant / Comp eng'g",
+                    "Religion": "Roman Catholic",
+                    "PatientType": "In-Patient",
+                    "DateOfAdmission": "1990-04-15T00:00:00",
+                    "DateOfConsultation": null,
+                    "Surgeon": null,
+                    "DateOfSurgery": null,
+                    "GeneralPhysician": null,
+                    "Orthopedic": null,
+                    "Neurologist": null,
+                    "Cardiologist": null,
+                    "Opthalmologoist": null,
+                    "Pulmonologist": null,
+                    "OtherDoctor": null,
+                    "ReferringDoctor": null,
+                    "DateOfReferral": null,
+                    "DateOfInitialEvaluation": null,
+                    "Diagnosis": null,
+                    "HPI": null,
+                    "PMHx": {
+                        "Trauma": null,
+                        "Arthritis": false,
+                        "Asthma": null,
+                        "HPN": false,
+                        "DM": null,
+                        "Allergies": false,
+                        "Surgery": null,
+                        "SurgeryDate": null,
+                        "Hopitalization": null,
+                        "HopitalizationDate": null,
+                        "CardiovascularDisease": null,
+                        "PulmonaryCondition": null,
+                        "NeurologyCondition": null,
+                        "Cancer": false,
+                        "Others": null
+                    },
+                    "FMHx": {
+                        "HypertensionF": null,
+                        "HypertensionM": null,
+                        "ArthritisF": null,
+                        "ArthritisM": null,
+                        "DiabetesMellitusF": null,
+                        "DiabetesMellitusM": null,
+                        "CancerF": null,
+                        "CancerM": null,
+                        "AsthmaF": null,
+                        "AsthmaM": null,
+                        "AllergiesF": null,
+                        "AllergiesM": null,
+                        "NeurologicConditionF": null,
+                        "NeurologicConditionM": null,
+                        "Others": null,
+                        "OthersF": null,
+                        "OthersM": null
+                    },
+                    "PSEHx": {
+                        "FinancialStatus": null,
+                        "PersonalityType": null,
+                        "LifeStyle": null,
+                        "EducationalAttainment": null,
+                        "LivesWith": null,
+                        "NumberOfOffspring": 0,
+                        "Relatives": null,
+                        "OtherLivesWith": null,
+                        "Hobbies": null,
+                        "Sports": null,
+                        "OtherHobbies": null,
+                        "CigaretteSmoker": false,
+                        "AlcoholDrinker": false,
+                        "TypeOfHouse": null,
+                        "OtherTypeOfHouse": null
+                    },
+                    "PatientId": 1,
+                    "AncillayrProcedures": null,
+                    "DrugHistory": null
+                };
+
+                $.ajax("@Url.Content("~/api/PatientVisits")", {
+                    type: "Post",
+                    data: JSON.stringify(data),
+                    dataType: "json",
+                    contentType: 'application/json',
+                    success: OnSuccess,
+                    error: OnFailure
+                });
+
+            });
+        });
+
+        $(function () {
+            $("#btnAddPatient2").click(function () {
+                var data = { "PatientVisitId": 0, "FirstName": "Gary2", "LastName": "Yumul", "Age": 0, "Sex": "M", "Address": "San Juan 1st Guagua Pampanga", "CityTown": null, "Province": null, "CivilStatus": "Single", "HandedNess": "Right", "Occupation": "Public Servant / Comp eng'g", "Religion": "Roman Catholic", "PatientType": "", "DateOfAdmission": "2015-01-19T00:00:00+00:00", "DateOfConsultation": "2015-01-20T00:00:00", "Surgeon": null, "DateOfSurgery": null, "GeneralPhysician": null, "Orthopedic": null, "Neurologist": null, "Cardiologist": null, "Opthalmologoist": null, "Pulmonologist": null, "OtherDoctor": null, "ReferringDoctor": null, "DateOfReferral": null, "DateOfInitialEvaluation": null, "Diagnosis": null, "HPI": null, "PMHx": { "Trauma": null, "Arthritis": false, "Asthma": null, "HPN": false, "DM": null, "Allergies": false, "Surgery": null, "SurgeryDate": null, "Hopitalization": null, "HopitalizationDate": null, "CardiovascularDisease": null, "PulmonaryCondition": null, "NeurologyCondition": null, "Cancer": false, "Others": null }, "FMHx": { "HypertensionF": null, "HypertensionM": null, "ArthritisF": null, "ArthritisM": null, "DiabetesMellitusF": null, "DiabetesMellitusM": null, "CancerF": null, "CancerM": null, "AsthmaF": null, "AsthmaM": null, "AllergiesF": null, "AllergiesM": null, "NeurologicConditionF": null, "NeurologicConditionM": null, "Others": null, "OthersF": null, "OthersM": null }, "PatientId": 8, "AncillayrProcedures": null, "DrugHistory": null };
+                $.ajax("@Url.Content("~/api/PatientVisits")", {
+                    type: "Post",
+                    data: $("form").serialize(),
+                    success: OnSuccess,
+                    error: OnFailure,
+                });
+
+            });
+        });
+    </script>
+}
+

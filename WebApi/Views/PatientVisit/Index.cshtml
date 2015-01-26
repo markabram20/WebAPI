@@ -1,0 +1,309 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{
+    ViewBag.Title = "Patients";
+}
+
+<h2>Patients</h2>
+<button id="btnAdd">Add</button>
+<button id="btnDel">Delete</button>
+<button id="btnEdit">Edit</button>
+<table id="tblPatients"></table>
+@section scripts
+{
+    <script>
+
+    var columns = ["PatientId", "FirstName", "LastName", "Age", "CivilStatus", "Handedness", "Gender", "Occupation", "Address", "Religion", "Nationality"]
+
+    function OnSuccess(data) {
+        //window.location.href = "@Url.Action("Index","PatientVisit")";
+    }
+
+    function OnFailure() {
+        alert("Error");
+    }
+
+    function getPatients() {
+        $.ajax("@Url.Content("~/api/PatientVisits")", {
+            cache: false,
+            beforeSend: function () {
+
+            },
+            success: populateTable,
+            complete: function () {
+
+            }
+        });
+    }
+
+    function populateTable(data) {
+        $("#tblPatients").empty();
+        $("#tblPatients").append("<tr></tr>");
+
+        $.each(columns, function (index, column) {
+            $("#tblPatients tr:last")
+            .append("<td>" + column + "</td>");
+        });
+
+        $.each(data, function (index, patient) {
+            $("#tblPatients").append("<tr></tr>");
+            $("#tblPatients tr:last")
+            .append("<td>" + patient.PatientId + "</td>")
+            .append("<td>" + patient.FirstName + "</td>")
+            .append("<td>" + patient.LastName + "</td>")
+            .append("<td>" + patient.Age + "</td>")
+            .append("<td>" + patient.CivilStatus + "</td>")
+            .append("<td>" + patient.HandedNess + "</td>")
+            .append("<td>" + patient.Gender + "</td>")
+            .append("<td>" + patient.Occupation + "</td>")
+            .append("<td>" + patient.Address + "</td>")
+            .append("<td>" + patient.Religion + "</td>")
+            .append("<td>" + patient.Nationality + "</td>");
+        });
+
+        if (data.length < 1) {
+            $("#tblPatients").append("<tr></tr>");
+            var x = columns.length;
+            $("#tblPatients tr:last").append("<td colspan='" + x + "'>No patients</td>");
+        }
+    }
+
+    $(function () {
+        getPatients();
+        //$("#btnAdd").click(function () { window.location.href = "@Url.Action("Add","PatientVisit")" });
+        $("#btnAdd").click(function () {
+            var data = {
+                "PatientVisitId": 0,
+                "FirstName": "Gary",
+                "LastName": "Yumul",
+                "Age": 25,
+                "Sex": "M",
+                "Address": "San Juan 1st Guagua Pampanga",
+                "CityTown": "",
+                "Province": "",
+                "CivilStatus": "Single",
+                "HandedNess": "Right",
+                "Occupation": "Public Servant / Comp eng'g",
+                "Religion": "Roman Catholic",
+                "PatientType": null,
+                "DateOfAdmission": null,
+                "DateOfConsultation": null,
+                "Surgeon": null,
+                "DateOfSurgery": null,
+                "GeneralPhysician": null,
+                "Orthopedic": null,
+                "Neurologist": null,
+                "Cardiologist": null,
+                "Opthalmologoist": null,
+                "Pulmonologist": null,
+                "OtherDoctor": null,
+                "ReferringDoctor": null,
+                "DateOfReferral": null,
+                "DateOfInitialEvaluation": null,
+                "Diagnosis": null,
+                "HPI": null,
+                "PMHx": {
+                    "Trauma": null,
+                    "Arthritis": false,
+                    "Asthma": null,
+                    "HPN": false,
+                    "DM": null,
+                    "Allergies": false,
+                    "Surgery": null,
+                    "SurgeryDate": null,
+                    "Hopitalization": null,
+                    "HopitalizationDate": null,
+                    "CardiovascularDisease": null,
+                    "PulmonaryCondition": null,
+                    "NeurologyCondition": null,
+                    "Cancer": false,
+                    "Others": null
+                },
+                "FMHx": {
+                    "HypertensionF": null,
+                    "HypertensionM": null,
+                    "ArthritisF": null,
+                    "ArthritisM": null,
+                    "DiabetesMellitusF": null,
+                    "DiabetesMellitusM": null,
+                    "CancerF": null,
+                    "CancerM": null,
+                    "AsthmaF": null,
+                    "AsthmaM": null,
+                    "AllergiesF": null,
+                    "AllergiesM": null,
+                    "NeurologicConditionF": null,
+                    "NeurologicConditionM": null,
+                    "Others": null,
+                    "OthersF": null,
+                    "OthersM": null
+                },
+                "PSEHx": {
+                    "FinancialStatus": null,
+                    "PersonalityType": null,
+                    "LifeStyle": null,
+                    "EducationalAttainment": null,
+                    "LivesWith": null,
+                    "NumberOfOffspring": 0,
+                    "Relatives": null,
+                    "OtherLivesWith": null,
+                    "Hobbies": null,
+                    "Sports": null,
+                    "OtherHobbies": null,
+                    "CigaretteSmoker": false,
+                    "AlcoholDrinker": false,
+                    "TypeOfHouse": null,
+                    "OtherTypeOfHouse": null
+                },
+                "PatientId": 1,
+                "AncillayrProcedures": null,
+                "DrugHistory": [
+                  {
+                      "RowId": 0,
+                      "DrugName": "d",
+                      "DrugDate": "2015-01-01T00:00:00",
+                      "Result": "Test",
+                      "PatientVisitId": 0
+                  }
+                ]
+            };
+            $.ajax("@Url.Content("~/api/PatientVisits")", {
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: 'application/json',
+                success: OnSuccess,
+                error: OnFailure
+            });
+        });
+
+        $("#btnDel").click(function () {
+            var id = prompt("Patient Visit Id:");
+            $.ajax("@Url.Content("~/api/PatientVisits/")"+id, {
+                type: "DELETE",
+                dataType: "json",
+                contentType: 'application/json',
+                success: OnSuccess,
+                error: OnFailure
+            });
+        });
+
+        $("#btnEdit").click(function () {
+            var data = {
+                "PatientVisitId": 14,
+                "FirstName": "Gary2 up",
+                "LastName": "Yumul",
+                "Age": 12,
+                "Sex": "M",
+                "Address": "San Juan 1st Guagua Pampanga",
+                "CityTown": null,
+                "Province": null,
+                "CivilStatus": "Single",
+                "HandedNess": "Right",
+                "Occupation": "Public Servant / Comp eng'g",
+                "Religion": "Roman Catholic",
+                "PatientType": "In-Patient",
+                "DateOfAdmission": "2015-01-01T00:00:00",
+                "DateOfConsultation": "2015-01-02T00:00:00",
+                "Surgeon": null,
+                "DateOfSurgery": null,
+                "GeneralPhysician": null,
+                "Orthopedic": null,
+                "Neurologist": null,
+                "Cardiologist": null,
+                "Opthalmologoist": null,
+                "Pulmonologist": null,
+                "OtherDoctor": null,
+                "ReferringDoctor": null,
+                "DateOfReferral": null,
+                "DateOfInitialEvaluation": null,
+                "Diagnosis": null,
+                "HPI": null,
+                "PMHx": {
+                    "Trauma": null,
+                    "Arthritis": false,
+                    "Asthma": null,
+                    "HPN": false,
+                    "DM": null,
+                    "Allergies": false,
+                    "Surgery": null,
+                    "SurgeryDate": null,
+                    "Hopitalization": null,
+                    "HopitalizationDate": null,
+                    "CardiovascularDisease": null,
+                    "PulmonaryCondition": null,
+                    "NeurologyCondition": null,
+                    "Cancer": false,
+                    "Others": null
+                },
+                "FMHx": {
+                    "HypertensionF": null,
+                    "HypertensionM": null,
+                    "ArthritisF": null,
+                    "ArthritisM": null,
+                    "DiabetesMellitusF": null,
+                    "DiabetesMellitusM": null,
+                    "CancerF": null,
+                    "CancerM": null,
+                    "AsthmaF": null,
+                    "AsthmaM": null,
+                    "AllergiesF": null,
+                    "AllergiesM": null,
+                    "NeurologicConditionF": null,
+                    "NeurologicConditionM": null,
+                    "Others": null,
+                    "OthersF": null,
+                    "OthersM": null
+                },
+                "PSEHx": {
+                    "FinancialStatus": null,
+                    "PersonalityType": null,
+                    "LifeStyle": null,
+                    "EducationalAttainment": null,
+                    "LivesWith": null,
+                    "NumberOfOffspring": 0,
+                    "Relatives": null,
+                    "OtherLivesWith": null,
+                    "Hobbies": null,
+                    "Sports": null,
+                    "OtherHobbies": null,
+                    "CigaretteSmoker": false,
+                    "AlcoholDrinker": false,
+                    "TypeOfHouse": null,
+                    "OtherTypeOfHouse": null
+                },
+                "PatientId": 1,
+                "AncillayrProcedures": null,
+                "DrugHistory": [
+                  {
+                      "RowId": 5,
+                      "DrugName": "D1u",
+                      "DrugDate": "2015-01-25T00:00:00",
+                      "Result": null,
+                      "PatientVisitId": 14
+                  },
+                  {
+                      "RowId": 6,
+                      "DrugName": "D1u",
+                      "DrugDate": "2015-01-25T00:00:00",
+                      "Result": "d2",
+                      "PatientVisitId": 14
+                  }
+                ]
+            };
+            $.ajax("@Url.Content("~/api/PatientVisits/14")", {
+                type: "PUT",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: 'application/json',
+                success: OnSuccess,
+                error: OnFailure
+            });
+        });
+    });
+</script>
+}
