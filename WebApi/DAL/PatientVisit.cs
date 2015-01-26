@@ -15,6 +15,7 @@ namespace WebApi.DAL
             PMHx = new PMHx();
             FMHx = new FMHx();
             Patient = new Patient();
+            PSEHx = new PSEHx();
             DateOfAdmission = null;
             DateOfConsultation = null;
             DateOfInitialEvaluation = null;
@@ -85,6 +86,7 @@ namespace WebApi.DAL
 
         public PMHx PMHx { get; set; }
         public FMHx FMHx { get; set; }
+        public PSEHx PSEHx { get; set; }
 
 
         // Navigation Properties and Foreign Keys
@@ -131,9 +133,9 @@ namespace WebApi.DAL
         [MaxLength(50)]
         public string Result { get; set; }
 
-        [ForeignKey("PatientVisit")]
+        //[ForeignKey("PatientVisit")]
         public int PatientVisitId { get; set; }
-        public PatientVisit PatientVisit { get; set; }
+        //public PatientVisit PatientVisit { get; set; }
     }
 
     [ComplexType]
@@ -184,5 +186,24 @@ namespace WebApi.DAL
         public bool? OthersF { get; set; }
         public bool? OthersM { get; set; }
     }
-}
 
+    [ComplexType]
+    public class PSEHx
+    {
+        public string FinancialStatus { get; set; }
+        public string PersonalityType { get; set; }
+        public string LifeStyle { get; set; }
+        public string EducationalAttainment { get; set; }
+        public string LivesWith { get; set; }
+        public int NumberOfOffspring { get; set; }
+        public string Relatives {get;set;}
+        public string OtherLivesWith { get; set; }
+        public string Hobbies { get; set; }
+        public string Sports { get; set; }
+        public string OtherHobbies { get; set; }
+        public bool CigaretteSmoker { get; set; }
+        public bool AlcoholDrinker { get; set; }
+        public string TypeOfHouse { get; set; }
+        public string OtherTypeOfHouse { get; set; }
+    }
+}

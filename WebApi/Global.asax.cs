@@ -24,6 +24,7 @@ namespace WebApi
 
             //DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
             Database.SetInitializer(new CreateDatabaseIfNotExists<WebApiDbContext>());
+            ValueProviderFactories.Factories.Add(new JsonValueProviderFactory());
         }
     }
 }

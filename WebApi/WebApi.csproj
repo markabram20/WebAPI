@@ -209,6 +209,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DrugHistoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PatientListController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
@@ -260,6 +261,14 @@
     <Compile Include="Migrations\201501150736238_PatientAddressUpdate.cs" />
     <Compile Include="Migrations\201501150736238_PatientAddressUpdate.Designer.cs">
       <DependentUpon>201501150736238_PatientAddressUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501220403308_PSEHx.cs" />
+    <Compile Include="Migrations\201501220403308_PSEHx.Designer.cs">
+      <DependentUpon>201501220403308_PSEHx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.cs" />
+    <Compile Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.Designer.cs">
+      <DependentUpon>201501250538113_DrugHistoryRemoveNavProp.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -381,6 +390,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501150736238_PatientAddressUpdate.resx">
       <DependentUpon>201501150736238_PatientAddressUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501220403308_PSEHx.resx">
+      <DependentUpon>201501220403308_PSEHx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.resx">
+      <DependentUpon>201501250538113_DrugHistoryRemoveNavProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
