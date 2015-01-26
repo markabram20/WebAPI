@@ -57,34 +57,7 @@ namespace WebApi.Controllers
                 return BadRequest();
             }
 
-            List<DrugHistory> drugs = new List<DrugHistory>();
-            
-            foreach (var d in patientVisit.DrugHistory)
-                drugs.Add(d);
-            
-            // from db
-            var oDrg = db.DrugHistory.Where(x => x.PatientVisitId == patientVisit.PatientVisitId).ToList();
-            
-            patientVisit.DrugHistory = null;
-            var entry = db.Entry(patientVisit);
-            entry.State = EntityState.Modified;
-            //entry.Collection(x => x.DrugHistory).EntityEntry.State = EntityState.Detached;
-                       
-
-            // to be deleted
-            var delDrg = oDrg.Where(x => !drugs.Any(y => y.RowId == x.RowId)).ToList();
-            foreach(var d in delDrg){
-                db.DrugHistory.Remove(d);
-            }
-
-            // to be edited
-            foreach (var drug in drugs)
-            {
-                if (oDrg.Where(x => x.RowId == drug.RowId).Count() < 1)
-                    db.Entry(drug).State = EntityState.Added;
-                else
-                    entry.Collection(x => x.DrugHistory).EntityEntry.State = EntityState.Modified;
-            }
+            db.Entry(patientVisit).State = EntityState.Modified;
 
             try
             {
