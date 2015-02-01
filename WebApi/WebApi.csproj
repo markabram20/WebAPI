@@ -209,11 +209,17 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AncillaryProceduresController.cs" />
+    <Compile Include="Controllers\CranialNerveAssmtsController.cs" />
     <Compile Include="Controllers\DrugHistoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MMTsController.cs" />
     <Compile Include="Controllers\PatientListController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Controllers\PatientVisitsController.cs" />
+    <Compile Include="Controllers\ROM2Controller.cs" />
+    <Compile Include="Controllers\ROMsController.cs" />
+    <Compile Include="Controllers\SensoryAxesController.cs" />
     <Compile Include="Controllers\SoapListController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAL\AppDbContext.cs" />
@@ -269,6 +275,54 @@
     <Compile Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.cs" />
     <Compile Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.Designer.cs">
       <DependentUpon>201501250538113_DrugHistoryRemoveNavProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501270437582_UpdatePMHX.cs" />
+    <Compile Include="Migrations\201501270437582_UpdatePMHX.Designer.cs">
+      <DependentUpon>201501270437582_UpdatePMHX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501280405209_palpation.cs" />
+    <Compile Include="Migrations\201501280405209_palpation.Designer.cs">
+      <DependentUpon>201501280405209_palpation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501280432302_updatePMHX01.cs" />
+    <Compile Include="Migrations\201501280432302_updatePMHX01.Designer.cs">
+      <DependentUpon>201501280432302_updatePMHX01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290612119_AncillaryProceduresSpellingFix.cs" />
+    <Compile Include="Migrations\201501290612119_AncillaryProceduresSpellingFix.Designer.cs">
+      <DependentUpon>201501290612119_AncillaryProceduresSpellingFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290649169_ROM.cs" />
+    <Compile Include="Migrations\201501290649169_ROM.Designer.cs">
+      <DependentUpon>201501290649169_ROM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290704500_ROM2.cs" />
+    <Compile Include="Migrations\201501290704500_ROM2.Designer.cs">
+      <DependentUpon>201501290704500_ROM2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290711500_RomUpdate.cs" />
+    <Compile Include="Migrations\201501290711500_RomUpdate.Designer.cs">
+      <DependentUpon>201501290711500_RomUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290718018_MMT.cs" />
+    <Compile Include="Migrations\201501290718018_MMT.Designer.cs">
+      <DependentUpon>201501290718018_MMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290719389_MMTUpdate.cs" />
+    <Compile Include="Migrations\201501290719389_MMTUpdate.Designer.cs">
+      <DependentUpon>201501290719389_MMTUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290732276_SensoryAx.cs" />
+    <Compile Include="Migrations\201501290732276_SensoryAx.Designer.cs">
+      <DependentUpon>201501290732276_SensoryAx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501300736101_AddedPatientVisitIdToRom.cs" />
+    <Compile Include="Migrations\201501300736101_AddedPatientVisitIdToRom.Designer.cs">
+      <DependentUpon>201501300736101_AddedPatientVisitIdToRom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502010922509_CranialNerveAssmt.cs" />
+    <Compile Include="Migrations\201502010922509_CranialNerveAssmt.Designer.cs">
+      <DependentUpon>201502010922509_CranialNerveAssmt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -396,6 +450,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501250538113_DrugHistoryRemoveNavProp.resx">
       <DependentUpon>201501250538113_DrugHistoryRemoveNavProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501270437582_UpdatePMHX.resx">
+      <DependentUpon>201501270437582_UpdatePMHX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501280405209_palpation.resx">
+      <DependentUpon>201501280405209_palpation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501280432302_updatePMHX01.resx">
+      <DependentUpon>201501280432302_updatePMHX01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290612119_AncillaryProceduresSpellingFix.resx">
+      <DependentUpon>201501290612119_AncillaryProceduresSpellingFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290649169_ROM.resx">
+      <DependentUpon>201501290649169_ROM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290704500_ROM2.resx">
+      <DependentUpon>201501290704500_ROM2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290711500_RomUpdate.resx">
+      <DependentUpon>201501290711500_RomUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290718018_MMT.resx">
+      <DependentUpon>201501290718018_MMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290719389_MMTUpdate.resx">
+      <DependentUpon>201501290719389_MMTUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290732276_SensoryAx.resx">
+      <DependentUpon>201501290732276_SensoryAx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501300736101_AddedPatientVisitIdToRom.resx">
+      <DependentUpon>201501300736101_AddedPatientVisitIdToRom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502010922509_CranialNerveAssmt.resx">
+      <DependentUpon>201502010922509_CranialNerveAssmt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

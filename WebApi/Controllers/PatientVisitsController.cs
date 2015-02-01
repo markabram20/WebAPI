@@ -30,7 +30,14 @@ namespace WebApi.Controllers
         [ResponseType(typeof(PatientVisit))]
         public async Task<IHttpActionResult> GetPatientVisit(int id)
         {
-            PatientVisit patientVisit = await db.PatientVisits.Include(x=>x.DrugHistory).Where(x=>x.PatientVisitId == id).FirstOrDefaultAsync();
+            PatientVisit patientVisit = await db.PatientVisits
+                .Include(x=>x.DrugHistory)
+                .Include(x=>x.AncillaryProcedures)
+                .Include(x=>x.ROMs)
+                .Include(x=>x.ROM2s)
+                .Include(x=>x.MMTs)
+                .Include(x=>x.SensoryAxs)
+                .Where(x=>x.PatientVisitId == id).FirstOrDefaultAsync();
             if (patientVisit == null)
             {
                 return NotFound();

@@ -21,5 +21,15 @@ namespace WebApi.DAL
         public DbSet<PatientVisit> PatientVisits { get; set; }
         public DbSet<AncillaryProcedure> AncillaryProcedures { get; set; }
         public DbSet<DrugHistory> DrugHistory { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.ROM> ROMs { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.ROM2> ROM2 { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.MMT> MMTs { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.SensoryAx> SensoryAxes { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.CranialNerveAssmt> CranialNerveAssmts { get; set; }
     }
 }
