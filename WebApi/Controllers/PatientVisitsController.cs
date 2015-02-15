@@ -37,6 +37,9 @@ namespace WebApi.Controllers
                 .Include(x=>x.ROM2s)
                 .Include(x=>x.MMTs)
                 .Include(x=>x.SensoryAxs)
+                .Include(x=>x.CranialNerveAssmts)
+                .Include(x=>x.CoordinationAssmts)
+                .Include(x => x.MBMs)
                 .Where(x=>x.PatientVisitId == id).FirstOrDefaultAsync();
             if (patientVisit == null)
             {

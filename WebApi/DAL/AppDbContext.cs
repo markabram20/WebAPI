@@ -31,5 +31,9 @@ namespace WebApi.DAL
         public System.Data.Entity.DbSet<WebApi.DAL.SensoryAx> SensoryAxes { get; set; }
 
         public System.Data.Entity.DbSet<WebApi.DAL.CranialNerveAssmt> CranialNerveAssmts { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.CoordinationAssmt> CoordinationAssmts { get; set; }
+
+        public System.Data.Entity.DbSet<WebApi.DAL.MBM> MBMs { get; set; }
     }
 }
