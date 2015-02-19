@@ -23,7 +23,9 @@ namespace WebApi
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             //DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
-            //Database.SetInitializer(new CreateDatabaseIfNotExists<WebApiDbContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<WebApiDbContext>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<WebApiDbContext>());.
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<WebApiDbContext>());
             ValueProviderFactories.Factories.Add(new JsonValueProviderFactory());
         }
     }

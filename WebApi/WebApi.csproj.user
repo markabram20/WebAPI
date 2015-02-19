@@ -9,7 +9,8 @@
     <WebStackScaffolding_DbContextTypeFullName>WebApi.DAL.WebApiDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>True</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
-    <NameOfLastUsedPublishProfile>ptprojectapi</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>ptprojectapi2</NameOfLastUsedPublishProfile>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -4,89 +4,83 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApi.DAL;
+using WebApi.DataSet;
+using WebApi.DataSet.SoapDataSetTableAdapters;
 using WebApi.Models;
 
 namespace WebApi.Controllers
 {
     public class ReportController : Controller
     {
-        private ReportDataSet _ds;
         public int _patientVisitId;
+        private SoapDataSet _soapDs = new SoapDataSet();
+        private PatientVisitsTableAdapter _patientVisitTable = new PatientVisitsTableAdapter();
+        private AncillaryProceduresTableAdapter _ancillaryTable = new AncillaryProceduresTableAdapter();
+        private DrugHistoriesTableAdapter _drugTable = new DrugHistoriesTableAdapter();
 
         // GET: Report
         public ActionResult Soap(int id)
         {
-            _patientVisitId = id;
-            _ds = new ReportDataSet();
-            ReportDataSet ds = new ReportDataSet();
-            ReportDataSource rds = new ReportDataSource();
+            try
+            {
+                _patientVisitId = id;
+                _patientVisitTable.Fill(_soapDs.PatientVisits, id);
+                _ancillaryTable.Fill(_soapDs.AncillaryProcedures, id);
+                _drugTable.Fill(_soapDs.DrugHistories, id);
 
-            rds.Name = "DataSet1";
-            rds.Value = ds.getPatientVisit(id);
+                ReportDataSource rds = new ReportDataSource();
+                rds.Name = "SoapDS";
+                rds.Value = _soapDs.PatientVisits;
 
-            ReportViewer rv = new Microsoft.Reporting.WebForms.ReportViewer();
-            rv.ProcessingMode = ProcessingMode.Local;
-            rv.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(SubreportProcessingHandler);
-            rv.LocalReport.ReportPath = Server.MapPath("~/Reports/RDLC/SoapReport.rdlc");
+                ReportViewer rv = new Microsoft.Reporting.WebForms.ReportViewer();
+                rv.ProcessingMode = ProcessingMode.Local;
+                rv.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(SubreportProcessingHandler);
+                rv.LocalReport.ReportPath = Server.MapPath("~/Reports/RDLC/SoapReport.rdlc");
 
-            // Add the new report datasource to the report.
-            rv.LocalReport.DataSources.Add(rds);
+                // Add the new report datasource to the report.
+                rv.LocalReport.DataSources.Add(rds);
+                rv.LocalReport.Refresh();
 
-            rv.LocalReport.Refresh();
+                byte[] streamBytes = null;
+                string mimeType = "";
+                string encoding = "";
+                string filenameExtension = "";
+                string[] streamids = null;
+                Warning[] warnings = null;
 
-            byte[] streamBytes = null;
-            string mimeType = "";
-            string encoding = "";
-            string filenameExtension = "";
-            string[] streamids = null;
-            Warning[] warnings = null;
+                streamBytes = rv.LocalReport.Render("PDF", null, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
 
-            streamBytes = rv.LocalReport.Render("PDF", null, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
-
-            //var report = new SoapReportGenerator(id);
-            //streamBytes = report.GenerateReportStream(Server.MapPath("~/Reports/RDLC/SoapReport.rdlc"), out mimeType);
-            return File(streamBytes, mimeType, "SoapReport.pdf");
+                return File(streamBytes, mimeType, "SoapReport.pdf");
+            }
+            catch(Exception e)
+            {
+                return Json(e, JsonRequestBehavior.AllowGet);
+            }
         }
 
         private void SubreportProcessingHandler(object sender, SubreportProcessingEventArgs e)
         {
-            var ds = new ReportDataSet();
             var rds = new ReportDataSource();
-            var rds2 = new ReportDataSource();
-
             rds.Name = "DataSet1";
-            rds2.Name = "DateSet2";
 
             switch (e.ReportPath)
             {
                 case "AncillaryProcedureReport":
-                    rds.Value = _ds.getAncillaryProcedures(_patientVisitId);
-                    rds2.Value = _ds.getDummydata();
-
+                    if (_soapDs.AncillaryProcedures.Count > 0)
+                        rds.Value = _soapDs.AncillaryProcedures;
+                    else
+                        rds.Value = new List<object>() { new { ProcedureName = "No record.", ProcedureDate = new DateTime(1,1,1) } };
                     e.DataSources.Add(rds);
-                    e.DataSources.Add(rds2);
+                    break;
+                case "DrugReport":
+                    if (_soapDs.DrugHistories.Count > 0)
+                        rds.Value = _soapDs.DrugHistories;
+                    else
+                        rds.Value = new List<object>() { new { DrugName = "No record.", DrugDate = new DateTime(1,1,1) } };
+                    e.DataSources.Add(rds);
                     break;
             }
         }
-
-        //void SubreportProcessingHandler(object sender, SubreportProcessingEventArgs e)
-        //{
-        //    var ds = new ReportDataSet();
-        //    var rds = new ReportDataSource();
-        //    var rds2 = new ReportDataSource();
-
-        //    rds.Name = "DataSet1";
-        //    rds.Name = "DataSet2";
-            
-        //    switch (e.ReportPath)
-        //    {
-        //        case "AncillaryProcedureReport":
-        //            rds.Value = ds.getAncillaryProcedures();
-        //            rds2.Value = ds.getDummydata();
-        //            e.DataSources.Add(rds2);
-        //            e.DataSources.Add(rds);
-        //            break;
-        //    }
-        //}
     }
 }
