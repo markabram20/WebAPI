@@ -491,6 +491,10 @@
     <Content Include="App_Data\aspnet-WebApi-20141223094319_log.ldf">
       <DependentUpon>aspnet-WebApi-20141223094319.mdf</DependentUpon>
     </Content>
+    <Content Include="Images\checkbox_no.ico" />
+    <Content Include="Images\checkbox_no.png" />
+    <Content Include="Images\checkbox_yes.ico" />
+    <Content Include="Images\checkbox_yes.png" />
     <Content Include="Reports\SoapReport.aspx" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
