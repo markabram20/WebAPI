@@ -4008,6 +4008,8 @@
   </Body>
   <Width>8.5in</Width>
   <Page>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.5in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
