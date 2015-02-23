@@ -227,6 +227,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="bin\DataSet\SoapDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoapDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AncillaryProceduresController.cs" />
     <Compile Include="Controllers\CoordinationAssmtsController.cs" />
@@ -251,7 +256,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SoapDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -476,15 +480,26 @@
     <Content Include="DataSet\SoapDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SoapDataSet.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>SoapDataSet.Designer.cs</LastGenOutput>
     </Content>
     <Content Include="DataSet\SoapDataSet.xss">
       <DependentUpon>SoapDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Properties\PublishProfiles\ptprojectapi.pubxml" />
-    <None Include="Properties\PublishProfiles\ptprojectapi2.pubxml" />
+    <Content Include="bin\DataSet\SoapDataSet.xsc">
+      <DependentUpon>SoapDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="bin\DataSet\SoapDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SoapDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="bin\DataSet\SoapDataSet.xss">
+      <DependentUpon>SoapDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\ptprojectapi2 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ptprojectapi2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
     <Content Include="App_Data\aspnet-WebApi-20141223094319.mdf" />
@@ -681,7 +696,11 @@
     </Content>
     <Content Include="Reports\RDLC\SoapReport.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+    <EmbeddedResource Include="Reports\RDLC\SoapReport2.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

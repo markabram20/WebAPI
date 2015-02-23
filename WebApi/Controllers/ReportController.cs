@@ -36,7 +36,7 @@ namespace WebApi.Controllers
                 ReportViewer rv = new Microsoft.Reporting.WebForms.ReportViewer();
                 rv.ProcessingMode = ProcessingMode.Local;
                 rv.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(SubreportProcessingHandler);
-                rv.LocalReport.ReportPath = Server.MapPath("~/Reports/RDLC/SoapReport.rdlc");
+                rv.LocalReport.ReportPath = Server.MapPath("~/Reports/RDLC/SoapReport2.rdlc");
 
                 // Add the new report datasource to the report.
                 rv.LocalReport.DataSources.Add(rds);
