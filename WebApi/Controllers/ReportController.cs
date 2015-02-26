@@ -18,6 +18,8 @@ namespace WebApi.Controllers
         private PatientVisitsTableAdapter _patientVisitTable = new PatientVisitsTableAdapter();
         private AncillaryProceduresTableAdapter _ancillaryTable = new AncillaryProceduresTableAdapter();
         private DrugHistoriesTableAdapter _drugTable = new DrugHistoriesTableAdapter();
+        private ROMsTableAdapter _romTable = new ROMsTableAdapter();
+        
 
         // GET: Report
         public ActionResult Soap(int id)
@@ -28,6 +30,7 @@ namespace WebApi.Controllers
                 _patientVisitTable.Fill(_soapDs.PatientVisits, id);
                 _ancillaryTable.Fill(_soapDs.AncillaryProcedures, id);
                 _drugTable.Fill(_soapDs.DrugHistories, id);
+                _romTable.Fill(_soapDs.ROMs, id);
 
                 ReportDataSource rds = new ReportDataSource();
                 rds.Name = "SoapDS";
@@ -78,6 +81,26 @@ namespace WebApi.Controllers
                         rds.Value = _soapDs.DrugHistories;
                     else
                         rds.Value = new List<object>() { new { DrugName = "No record.", DrugDate = new DateTime(1,1,1) } };
+                    e.DataSources.Add(rds);
+                    break;
+                case "RomReport":
+                    if (_soapDs.ROMs.Count > 0)
+                        rds.Value = _soapDs.ROMs;
+                    else
+                        rds.Value = new List<object>() { new { 
+                            Motion = "No record.", Arom = DBNull.Value, Prom = DBNull.Value, 
+                            NormalValue = DBNull.Value, Difference = DBNull.Value } };
+                    e.DataSources.Add(rds);
+                    break;
+                case "Rom2Report":
+                    if (_soapDs.ROM2.Count > 0)
+                        rds.Value = _soapDs.ROM2;
+                    else
+                        rds.Value = new List<object>() { new { 
+                            Motion = "No record.", AromR = DBNull.Value, AromL = DBNull.Value, 
+                            PromR = DBNull.Value, PromL = DBNull.Value, 
+                            NormalValue = DBNull.Value, 
+                            DifferenceR = DBNull.Value, DifferenceL = DBNull.Value } };
                     e.DataSources.Add(rds);
                     break;
             }

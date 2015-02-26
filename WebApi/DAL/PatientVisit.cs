@@ -417,10 +417,14 @@ namespace WebApi.DAL
         public int RowId { get; set; }
         [MaxLength(100)]
         public string Motion { get; set; }
-        public decimal Arom { get; set; }
-        public decimal Prom { get; set; }
-        public decimal NormalValue { get; set; }
-        public decimal Difference { get; set; }
+        [MaxLength(15)]
+        public string Arom { get; set; }
+        [MaxLength(15)]
+        public string Prom { get; set; }
+        [MaxLength(15)]
+        public string NormalValue { get; set; }
+        [MaxLength(15)]
+        public string Difference { get; set; }
         [MaxLength(20)]
         public string EndFeel { get; set; }
         public int PatientVisitId { get; set; }
@@ -432,13 +436,20 @@ namespace WebApi.DAL
         public int RowId { get; set; }
         [MaxLength(100)]
         public string Motion { get; set; }
-        public decimal AromR { get; set; }
-        public decimal AromL { get; set; }
-        public decimal PromR { get; set; }
-        public decimal PromL { get; set; }
-        public decimal NormalValue { get; set; }
-        public decimal DifferenceR { get; set; }
-        public decimal DifferenceL { get; set; }
+        [MaxLength(15)]
+        public string AromR { get; set; }
+        [MaxLength(15)]
+        public string AromL { get; set; }
+        [MaxLength(15)]
+        public string PromR { get; set; }
+        [MaxLength(15)]
+        public string PromL { get; set; }
+        [MaxLength(15)]
+        public string NormalValue { get; set; }
+        [MaxLength(15)]
+        public string DifferenceR { get; set; }
+        [MaxLength(15)]
+        public string DifferenceL { get; set; }
         [MaxLength(20)]
         public string EndFeel { get; set; }
         public int PatientVisitId { get; set; }

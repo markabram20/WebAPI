@@ -3627,7 +3627,7 @@
                           <Top>13.75in</Top>
                           <Left>1in</Left>
                           <Height>1.8in</Height>
-                          <Width>6.5in</Width>
+                          <Width>6.50001in</Width>
                           <ZIndex>92</ZIndex>
                           <Style>
                             <Border>
@@ -5711,24 +5711,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <Image Name="Image30">
-                          <Source>Embedded</Source>
-                          <Value>=IIf(Fields!OcularInspection_Cooperative.Value, "checkbox_yes", "checkbox_no")</Value>
-                          <Sizing>FitProportional</Sizing>
-                          <Top>24.29in</Top>
-                          <Left>0.67323in</Left>
-                          <Height>0.16in</Height>
-                          <Width>0.16in</Width>
-                          <ZIndex>142</ZIndex>
-                          <Visibility>
-                            <Hidden>true</Hidden>
-                          </Visibility>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                          </Style>
-                        </Image>
                         <Textbox Name="Textbox142">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -5750,7 +5732,7 @@
                           <Left>0.87501in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>143</ZIndex>
+                          <ZIndex>142</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -5795,7 +5777,7 @@
                           <Left>1.00005in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>144</ZIndex>
+                          <ZIndex>143</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -5827,7 +5809,7 @@
                           <Left>0.875in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>145</ZIndex>
+                          <ZIndex>144</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -5881,7 +5863,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>146</ZIndex>
+                          <ZIndex>145</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -5913,7 +5895,7 @@
                           <Left>0.87505in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>147</ZIndex>
+                          <ZIndex>146</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -5967,7 +5949,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>148</ZIndex>
+                          <ZIndex>147</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6008,7 +5990,7 @@
                           <Left>0.87505in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>149</ZIndex>
+                          <ZIndex>148</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6053,7 +6035,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>150</ZIndex>
+                          <ZIndex>149</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6094,7 +6076,7 @@
                           <Left>0.87505in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>151</ZIndex>
+                          <ZIndex>150</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6148,7 +6130,7 @@
                           <Left>1.00002in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>152</ZIndex>
+                          <ZIndex>151</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6189,7 +6171,7 @@
                           <Left>0.87489in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>153</ZIndex>
+                          <ZIndex>152</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6243,7 +6225,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>154</ZIndex>
+                          <ZIndex>153</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6297,7 +6279,7 @@
                           <Left>0.99993in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>155</ZIndex>
+                          <ZIndex>154</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6338,7 +6320,7 @@
                           <Left>0.87489in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>156</ZIndex>
+                          <ZIndex>155</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6392,7 +6374,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>157</ZIndex>
+                          <ZIndex>156</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6433,7 +6415,7 @@
                           <Left>0.87489in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>158</ZIndex>
+                          <ZIndex>157</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6452,7 +6434,7 @@
                           <Left>0.67339in</Left>
                           <Height>0.16in</Height>
                           <Width>0.16in</Width>
-                          <ZIndex>159</ZIndex>
+                          <ZIndex>158</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6483,7 +6465,7 @@
                           <Left>0.87505in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>160</ZIndex>
+                          <ZIndex>159</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6524,7 +6506,7 @@
                           <Left>0.87489in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>161</ZIndex>
+                          <ZIndex>160</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6578,7 +6560,7 @@
                           <Left>0.99989in</Left>
                           <Height>0.2in</Height>
                           <Width>6.99999in</Width>
-                          <ZIndex>162</ZIndex>
+                          <ZIndex>161</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6613,7 +6595,7 @@
                           <Left>0.87489in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
-                          <ZIndex>163</ZIndex>
+                          <ZIndex>162</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6632,7 +6614,7 @@
                           <Left>0.67323in</Left>
                           <Height>0.16in</Height>
                           <Width>0.16in</Width>
-                          <ZIndex>164</ZIndex>
+                          <ZIndex>163</ZIndex>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -6673,6 +6655,51 @@
                           <Left>0.87505in</Left>
                           <Height>0.2in</Height>
                           <Width>7.12499in</Width>
+                          <ZIndex>164</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox163">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Body Temperature: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_BodyTemperature</Label>
+                                  <Value>=Fields!Palpation_BodyTemperature.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>29.99167in</Top>
+                          <Left>0.875in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.12499in</Width>
                           <ZIndex>165</ZIndex>
                           <Style>
                             <Border>
@@ -6684,6 +6711,571 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <Textbox Name="Textbox131">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Palpation:</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>29.75in</Top>
+                          <Left>0.5in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.5in</Width>
+                          <ZIndex>166</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox164">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Muscle Tone: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_MuscleTone</Label>
+                                  <Value>=Fields!Palpation_MuscleTone.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>30.23334in</Top>
+                          <Left>0.87489in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.12499in</Width>
+                          <ZIndex>167</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox165">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Tenderness: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_Tenderness</Label>
+                                  <Value>=Fields!Palpation_Tenderness.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>30.71667in</Top>
+                          <Left>0.87478in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.12499in</Width>
+                          <ZIndex>168</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox166">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Edema: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_Edema</Label>
+                                  <Value>=Fields!Palpation_Edema.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>30.475in</Top>
+                          <Left>0.87489in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.12499in</Width>
+                          <ZIndex>169</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox167">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Location</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_Location</Label>
+                                  <Value>=Fields!Palpation_Location.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>30.95834in</Top>
+                          <Left>0.99978in</Left>
+                          <Height>0.2in</Height>
+                          <Width>6.99999in</Width>
+                          <ZIndex>170</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox168">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Deformity</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>31.20001in</Top>
+                          <Left>0.87505in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7.12499in</Width>
+                          <ZIndex>171</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox169">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>• </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>Location</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>: </Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>Palpation_Deformity</Label>
+                                  <Value>=Fields!Palpation_Deformity.Value</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>31.44168in</Top>
+                          <Left>1.00005in</Left>
+                          <Height>0.2in</Height>
+                          <Width>6.99999in</Width>
+                          <ZIndex>172</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox170">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Muscle Guarding</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>31.68334in</Top>
+                          <Left>1in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7in</Width>
+                          <ZIndex>173</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox171">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Muscle spasm</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>31.92501in</Top>
+                          <Left>1in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7in</Width>
+                          <ZIndex>174</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox172">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Subluxation</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>32.16668in</Top>
+                          <Left>1in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7in</Width>
+                          <ZIndex>175</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox173">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Dislocation</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontWeight>Normal</FontWeight>
+                                    <TextDecoration>None</TextDecoration>
+                                    <Color>#000000</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Top>32.40834in</Top>
+                          <Left>1in</Left>
+                          <Height>0.2in</Height>
+                          <Width>7in</Width>
+                          <ZIndex>176</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Image Name="Image33">
+                          <Source>Embedded</Source>
+                          <Value>=IIf(Fields!Palpation_MuscleGuarding.Value, "checkbox_yes", "checkbox_no")</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>31.72335in</Top>
+                          <Left>0.79833in</Left>
+                          <Height>0.16in</Height>
+                          <Width>0.16in</Width>
+                          <ZIndex>177</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Image Name="Image34">
+                          <Source>Embedded</Source>
+                          <Value>=IIf(Fields!Palpation_MuscleSpasm.Value, "checkbox_yes", "checkbox_no")</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>31.96502in</Top>
+                          <Left>0.79833in</Left>
+                          <Height>0.16in</Height>
+                          <Width>0.16in</Width>
+                          <ZIndex>178</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Image Name="Image35">
+                          <Source>Embedded</Source>
+                          <Value>=IIf(Fields!Palpation_Subluxation.Value, "checkbox_yes", "checkbox_no")</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>32.20668in</Top>
+                          <Left>0.79833in</Left>
+                          <Height>0.16in</Height>
+                          <Width>0.16in</Width>
+                          <ZIndex>179</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Image Name="Image36">
+                          <Source>Embedded</Source>
+                          <Value>=IIf(Fields!Palpation_Dislocation.Value, "checkbox_yes", "checkbox_no")</Value>
+                          <Sizing>FitProportional</Sizing>
+                          <Top>32.44835in</Top>
+                          <Left>0.79817in</Left>
+                          <Height>0.16in</Height>
+                          <Width>0.16in</Width>
+                          <ZIndex>180</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Image>
+                        <Subreport Name="AncillaryProcedures">
+                          <ReportName>AncillaryProcedureReport</ReportName>
+                          <Top>7.75in</Top>
+                          <Left>0.5in</Left>
+                          <Height>0.5in</Height>
+                          <Width>3in</Width>
+                          <ZIndex>181</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Subreport Name="DrugReport">
+                          <ReportName>DrugReport</ReportName>
+                          <Top>8.5in</Top>
+                          <Left>0.5in</Left>
+                          <Height>0.375in</Height>
+                          <Width>3in</Width>
+                          <ZIndex>182</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Subreport Name="RomReport">
+                          <ReportName>RomReport</ReportName>
+                          <Top>32.85835in</Top>
+                          <Left>0.5in</Left>
+                          <Height>0.5in</Height>
+                          <Width>3in</Width>
+                          <ZIndex>183</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Subreport Name="Rom2Report">
+                          <ReportName>Rom2Report</ReportName>
+                          <Top>33.40002in</Top>
+                          <Left>0.5in</Left>
+                          <Height>0.5in</Height>
+                          <Width>3in</Width>
+                          <ZIndex>184</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
                       </ReportItems>
                       <Style>
                         <Border>
